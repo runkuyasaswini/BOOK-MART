@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 27px 20px;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-right {
+            display: flex;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+        }
+
+       
+    .catalog{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 19px;
+      padding: 1%;
+    }
+    .catalog div{
+      padding: 4%;
+      box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.7);
+    }
+    .catalog p{
+      font-size: 0.7rem;
+    }
+    .catalog img{
+      width:10vw
+    }
+    .catalog .btn{
+      background-color: bisque;
+      border:none;
+      padding:4% 5%
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="#">Amazon.in</a>
+        </div>
+        <div class="navbar-right">
+          <li> <input type="text" name="search" size="18" value="search"></li>
+          <a href="#">Home</a>
+          <a href="#">Cart</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </div>
+    </div>
+  <section>
+    <h2>Catalog</h2>
+    <div class="catalog">
+      <div>
+      <img src="4.jpeg"/>
+          <h2>THE ALCHEMIST</h2>
+          <p>Author:Paulo Coelho</p>
+          <p>Publisher:HarperCollins</p>
+          <p> ISBN13:8172234988</p>
+          <p>price:$30.00</p>
+          <button class="btn">Add to cart</button>
+        </div>
+      <div>
+        <img src="2.jpg"/>
+        
+          <h2>The Greatest Salesman In The World</h2>
+          <p> Publisher: Transworld Publishers Ltd
+            </p>
+            
+            <p>ISBN: 9780553175219</p>
+            <p>price:$20.00</p>
+            
+        <button class="btn">Add to cart</button>
+      </div>
+      <div>
+        <img src="3.jpg"/>
+        <h2>Dream's Sake</h2>
+          <p> Publisher:V&S Publishers
+            </p>
+            <p>Author:Jyoti Arora</p>
+            <p>ISBN: 9787553175219</p>
+            <p>price:$13.00</p>
+        <button class="btn">Add to cart</button>
+      </div>
+      <div>
+        <img src="5.jpg"/>
+        <h2>The Palace of Illusions</h2>
+          <p> Publisher:Pan Macmillan India
+            </p>
+            <p>Author :Chitra Banerjee Divakaruni</p>
+            <p>ISBN: 9795755317519</p>
+            <p>price:$16.00</p>
+        
+        <button class="btn">Add to cart</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function validateForm() 
+    {
+  
+      var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  
+
+  if (email === "") 
+  {
+    alert("Please enter an email");
+    return;
+  }
+
+  if (password === "") {
+    alert("Please enter a password");
+    return;
+  }
+
+
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+
+  
+  submitForm();
+}
+
+function validateEmail(email) {
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function submitForm() {
+  
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  
+  
+  console.log("Email: " + email);
+  console.log("Password: " + password);
+  alert("Login successful!");
+
+}
+    </script>
+    <style>
+        body{
+            background-color: lightblue;
+            margin: 0%;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+
+        
+        .login{
+            background-color:peachpuff;
+            width:30%;
+            border-radius:10px;
+            text-align: center;
+            margin: auto;
+            margin-top:10%;
+            padding:5%;
+            border-radius: 10px;
+        }
+        .login div{
+            margin: 2%;
+            border-radius: 10px;
+        }
+        .login input{
+            padding: 2%;
+            width:25vw;
+            border-radius: 10px;
+
+        }
+        .forget{
+            font-size: 1.3rem;
+
+        }
+        .btn{
+            background-color: red;
+            padding: 3%;
+            width:10vw;
+            border: none;
+            cursor: pointer;
+            color: beige;
+        }
+
+    </style>
+    
+</head>
+<body>
+  
+     <section class="login">
+        
+        <h1>login</h1>
+      <div>
+        <label>Emailid</label>
+        <input type="email" id="email" placeholder="Enter email">
+        
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+      </div>
+      
+      <div>
+        <a class="forget" href="#">forget password?</a>
+      </div>
+      <button  class="btn" type="button" onclick="validateForm()">login</button>
+    
+      <div>
+        not a member?<a href="./registration.html">
+            signup Here
+      </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile</title>
+  <script>
+    function validation(){
+         var firstName=document.getElementById("firstName").value;
+         var lastName=document.getElementById("lastName").value;
+         var email=document.getElementById("email").value;
+         var address=document.getElementById("address").value;
+         var password = document.getElementById("password").value;
+         var phno = document.getElementById("phoneNumber").value;
+         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/
+         var nameCheck=/^[a-zA-Z ]+$/
+         var emailCheck=/^[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,3}$/
+         var phone=/^\d{10}$/
+         const minLength = 10;
+                        
+         if(firstName==""||lastName==""||email==""||password==""||address==""||phno==""){
+             alert("please enter all fields")
+             return false
+         }
+         if(!firstName.match(nameCheck)||firstName.length<3||!lastName.match(nameCheck)||lastName.length<3){
+             alert("name should not contain numbers")
+             return false
+         }
+         
+         if(!email.match(emailCheck)){
+             alert("Check email once")
+             return false
+         }
+         
+         
+         if(!password.match(passwordRegex)){
+          alert("Password must meet the criteria: at least 8 characters, one uppercase letter, one lowercase letter, and one digit")
+          return false
+         }
+
+         if (address.length < minLength) {
+                alert(" address must be at least 10 characters long");
+                return false
+  }
+         
+         if(!phno.match(phone)){
+          alert("phone number should be 10 digits")
+          return false
+        }
+
+
+        alert("profile updation successful!");
+    }
+ </script>
+  <style>
+    form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color:whitesmoke;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  background-color: peachpuff;
+  
+
+}
+
+input, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  
+  <form action="#">
+    <h1>Edit your Profile</h1>
+    <label for="firstName">First Name:</label>
+    <input id="firstName" name="firstName" >
+
+    <label for="lastName">Last Name:</label>
+    <input  id="lastName" name="lastName" >
+
+    <label for="email">Email:</label>
+    <input id="email" name="email" >
+    <label for="password">Password:</label>
+    <input type="password"   id="password" name="password" >
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" ></textarea>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" name="phoneNumber" >
+    
+    <button type="button" onclick="validation()">save changes</button>
+  </form>
+</body>
+</html>

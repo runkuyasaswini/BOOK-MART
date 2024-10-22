@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function validation(){
+           var name=document.getElementById("name").value;
+           var email=document.getElementById("email").value;
+           var password = document.getElementById("password").value;
+           var conpassword = document.getElementById("conpassword").value;
+           var phno = document.getElementById("phno").value;
+           var nameCheck=/^[a-zA-Z ]+$/
+           var emailCheck=/^[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,3}$/
+           var phone=/^\d{10}$/
+                          
+           if(name==""||email==""||password==""||phno==""){
+               alert("please enter all fields")
+               return false
+           }
+           if(!name.match(nameCheck)||name.length<3){
+               alert("name should not contain numbers")
+               return false
+           }
+           
+           if(!email.match(emailCheck)){
+               alert("Check email once")
+               return false
+           }
+           
+           
+           if(password!=conpassword){
+            alert("pasword and confirm password are not same")
+            return false
+           }
+           
+           if(!phno.match(phone)){
+            alert("phone number should be 10 digits")
+            return false
+          }
+
+
+          alert("registration successful!");
+      }
+   </script>
+    <style>
+        body{
+            background-color: lightblue;
+            margin: 0%;
+            text-align: center;  
+        }
+
+        
+        .signup{
+            background-color:peachpuff;
+            width:30%;
+            border-radius:10px;
+            text-align: center;
+            margin: auto;
+            margin-top:10%;
+            padding:5%;
+            border-radius: 10px;
+        }
+        .signup div{
+            margin: 2%;
+        }
+        .signup input{
+            padding: 2%;
+            width:25vw;
+            border-radius: 10px;
+
+        }
+        .forget{
+            font-size: 1.3rem;
+
+        }
+        .btn{
+            background-color: red;
+            padding: 3%;
+            width:10vw;
+            border: none;
+            cursor: pointer;
+            color: beige;
+            border-radius: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+      <section class="signup">
+        
+        <h1>sign up</h1>
+        <div> 
+            <input id="name" placeholder="enter your username" />
+            
+          </div>
+      <div>
+        
+        <input id="email" placeholder="enter your email id"/>
+      </div>
+      <div>
+        
+        <input id="password" placeholder="enter your password"/>
+      </div>
+      <div>
+        
+        <input id="conpassword" placeholder="Enter Confirm Password"/>
+    </div>
+    <div>
+      <input id="phno" placeholder="Enter your phone number"/>
+    </div>
+      <button  class="btn" type="button" onclick="validation()">register</button>
+      
+      <div>
+        Already a member?<a href="./login.html">
+            login Here
+      </div>
+    </section>
+</body>
+</html>
