@@ -1,1 +1,2 @@
 # BOOK-MART
+BOOK-MART is an online bookstore web application designed to provide users with a seamless book-shopping experience. It features a user-friendly interface where customers can browse a catalog of books, add items to their cart, and complete purchases through a secure checkout process. The platform includes user authentication for login and registration, profile management, and an order confirmation system. Future enhancements include backend integration, improved UI styling, and enhanced interactivity.
